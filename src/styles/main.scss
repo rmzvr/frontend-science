@@ -1,0 +1,9 @@
+@use 'abstracts' as *;
+@use 'base' as *;
+@use 'components' as *;
+@use './utilities/container' as *;
+@use './utilities/hidden' as *;
+
+h1 {
+  color: red;
+}
