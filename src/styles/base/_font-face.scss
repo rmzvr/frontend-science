@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Geometria';
+  src: local('Geometria Light'), local('Geometria-Light'),
+      url('../../fonts/Geometria/Geometria-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: local("Geometria Regular"), local("Geometria-Regular"),
+    url("../../fonts/Geometria/Geometria-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: local("Geometria Medium"), local("Geometria-Medium"),
+    url("../../fonts/Geometria/Geometria-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: local("Geometria Bold"), local("Geometria-Bold"),
+    url("../../fonts/Geometria/Geometria-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: local("Myriad Pro Regular"), local("MyriadPro-Regular"),
+    url("../../fonts/MyriadPro/MyriadPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: local("Myriad Pro Bold"), local("MyriadPro-Bold"),
+    url("../../fonts/MyriadPro/MyriadPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}

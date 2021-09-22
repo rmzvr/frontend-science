@@ -1,0 +1,31 @@
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide__image {
+  margin-bottom: 74px;
+}
+
+.slide__title {
+  font-size: 47px;
+  line-height: 62px;
+  color: #ffffff;
+  font-weight: normal;
+  font-family: "Myriad Pro";
+  text-align: center;
+  max-width: 32ch;
+  margin-bottom: 57px;
+
+  text-transform: uppercase;
+
+  .bold {
+    font-weight: bold;
+  }
+}
+
+.slide__buttons-wrapper {
+  display: flex;
+}

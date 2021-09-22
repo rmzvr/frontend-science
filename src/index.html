@@ -5,8 +5,418 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
   </head>
+
   <body>
-    
+    <header class="header">
+      <a href="#">
+        <img
+          src="/images/header/logo_header.png"
+          alt="logo"
+          width="140px"
+          height="68px"
+        />
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-links">
+          <li>
+            <a href="#slides">Первый экран</a>
+          </li>
+          <li>
+            <a href="#introduction">Вступление</a>
+          </li>
+          <li>
+            <a href="#infographics">Инфографикa</a>
+          </li>
+          <li>
+            <a href="#performance">Производительность</a>
+          </li>
+          <li>
+            <a href="#contacts">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="header__nav-contacts">
+          <li>
+            <a href="tel:+380966228613">+38 (096) 622 86 13</a>
+          </li>
+
+          <li>
+            <a href="tel:+380966228613">+38 (096) 622 86 13</a>
+          </li>
+        </ul>
+
+        <ul class="header__nav-languages">
+          <li>
+            <a href="#">EN</a>
+          </li>
+          <li>
+            <a href="#">UA</a>
+          </li>
+          <li>
+            <a href="#">RU</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="slides" id="slides">
+        <div class="carousel">
+          <button class="carousel__button" data-button-type="left">
+            <img
+              src="/images/slides/carousel-arrow-left.png"
+              alt="arrow-left"
+            />
+          </button>
+          <div class="carousel-track">
+            <div class="carousel-track__slide slide">
+              <img
+                class="slide__image"
+                src="/images/slides/logo-colored.png"
+                alt="logo"
+                width="565px"
+                height="271px"
+              />
+              <h1 class="slide__title">
+                <span class="bold">Frontend-разработчики</span> должны быть в
+                теме всего
+              </h1>
+              <div class="slide__buttons-wrapper">
+                <a class="link link--theme--ghost" href="#">да, должны</a>
+                <a class="link link--theme--winter" href="#">конечно, должны</a>
+              </div>
+            </div>
+            <div class="carousel-track__slide slide"></div>
+            <div class="carousel-track__slide slide"></div>
+          </div>
+          <button class="carousel__button" data-button-type="right">
+            <img
+              src="/images/slides/carousel-arrow-right.png"
+              alt="arrow-right"
+            />
+          </button>
+          <div class="status-bar">
+            <div class="status-bar__item status-bar__item--active"></div>
+            <div class="status-bar__item"></div>
+            <div class="status-bar__item"></div>
+          </div>
+
+          <label class="carousel__checkbox checkbox" data-checked="false">
+            <span class="checkbox__input">
+              <input type="checkbox" name="checkbox" />
+              <span class="checkbox__control">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    d="M1.73 12.91l6.37 6.37L22.79 4.59"
+                  />
+                </svg>
+              </span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <section class="introduction" id="introduction">
+        <aside class="introduction__aside">
+          <img
+            src="/images/introduction/logo-colored.png"
+            alt="#"
+            width="382px"
+            height="183px"
+          />
+          <h2>Мысли Криса Койера</h2>
+        </aside>
+
+        <div class="introduction__content">
+          <p>
+            Одна из мыслей которая поселилась в моей голове:
+            <span class="bold"
+              >должен ли frontend-разработчик быть в курсе всего?</span
+            >
+          </p>
+
+          <p>
+            В общем смысле, frontend-разработчик может использоваться и на
+            других рабочих местах. Вся команда разработчиков заканчивает
+            разговор на frontend-разработчике. В этом смысл моей идеи.
+          </p>
+
+          <p>
+            Frontend-разработчики создают те вещи, с которыми будут
+            взаимодействовать люди. Все этапы разработки проходят вместе с
+            frontend-разработчиком. Возможно, именно поэтому это такая забавная
+            работа!
+          </p>
+
+          <p>
+            Поскольку frontend-разработчик занимает центральное место в цепочке
+            разработки, и при этом мы имеем дело с большим колличеством разных
+            специалистов, мы должны понимать их работу и иногда подсказывать,
+            что и как сделать лучше.
+          </p>
+
+          <blockquote>
+            Frontend-разработчик должен разбираться в дизайне
+          </blockquote>
+
+          <p>
+            Если frontend-разработчик не является сам по себе дизайнером, он
+            должен знать, насколько важен дизайн. Он должен иметь хороший вкус.
+            Он должен знать об инструментах, участвующих непосредственно в
+            разработке.
+          </p>
+
+          <p class="bold">
+            Frontend-разработчик должен разбираться в работе серверной части
+            (backend)
+          </p>
+
+          <p>
+            Даже если вы и не backend-разработчик, то вы явно осознаёте всю
+            важность серверной части. Вы понимаете, с чем взаимодействует
+            backend, что передается на сервер, а что нет. Вы знаете об
+            обязанностях backend-разработчика. Вы понимаете, какой язык
+            используется на сервере, и при этом должны уметь обьяснить, что
+            должен дать вам backend и что нужно от серверной части frontend-а.
+          </p>
+
+          <p class="bold">
+            Frontend-разработчик должен разбираться в работе сетей
+          </p>
+
+          <p>
+            Frontend-разработчик понимает, что сайты располагаются в интернете,
+            данные передаются по сети, и что сеть - это дикое и непредсказуемое.
+            Необходимо понимать, какие бывают сети, как они работают, и
+            насколько они бывают быстрые и надежные.
+          </p>
+        </div>
+      </section>
+
+      <section class="infographics" id="infographics">
+        <!-- add ul li structure -->
+        <article class="infographics__item">
+          <img
+            class="infographics__item-image"
+            src="/images/infographics/image1.png"
+            alt=""
+            width="283px"
+            height="213px"
+          />
+          <div>
+            <h2 class="infographics__item-title">HTML 5</h2>
+            <p class="infographics__item-description">
+              HyperText Markup Language
+            </p>
+          </div>
+        </article>
+
+        <article class="infographics__item">
+          <img
+            src="/images/infographics/image2.png"
+            alt=""
+            width="238px"
+            height="213px"
+          />
+          <div>
+            <h2 class="infographics__item-title">CSS</h2>
+            <p class="infographics__item-description">Cascading Style Sheets</p>
+          </div>
+        </article>
+
+        <article class="infographics__item">
+          <img
+            src="/images/infographics/image3.png"
+            alt=""
+            width="253px"
+            height="197px"
+          />
+          <div>
+            <h2 class="infographics__item-title">JS</h2>
+            <p class="infographics__item-description">JavaScript</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="performance" id="performance">
+        <h2 class="performance__title">
+          Frontend-разработчик должен разбираться в производительности
+        </h2>
+
+        <article class="performance__article">
+          <div class="performance__article-wrapper">
+            <h3 class="performance__article-title">Performance matters</h3>
+            <p class="performance__article-description">
+              Производительность имеет важное место в успехе вашего проекта
+            </p>
+            <a class="performance__link link link--style--sky" href="#"
+              >подробнее</a
+            >
+          </div>
+          <img
+            class="performance__article-image"
+            src="/images/performance/image1.png"
+            alt=""
+            width="800px"
+            height="512px"
+          />
+        </article>
+
+        <article
+          class="performance__article performance__article--type--reversed"
+        >
+          <div class="performance__article-wrapper">
+            <h3 class="performance__article-title">Тонкости</h3>
+            <p class="performance__article-description">
+              Необходимо понимать насколько быстрым должен быть backend
+            </p>
+            <a class="performance__link link link--style--sky" href="#"
+              >подробнее</a
+            >
+          </div>
+          <img
+            class="performance__article-image"
+            src="/images/performance/image2.png"
+            alt=""
+            width="800px"
+            height="512px"
+          />
+        </article>
+      </section>
+
+      <section class="contacts" id="contacts">
+        <div class="contacts__inner">
+          <h2 class="contacts__title">Контакты</h2>
+          <address>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                18000, Украина, г. Черкассы, ул. Героев Сталинграда 42/1
+              </li>
+
+              <li class="contacts__item">
+                <ul>
+                  <li>
+                    <a href="tel:+380966228613">+38 (096) 622 86 13</a>
+                  </li>
+                  <li>
+                    <a href="tel:+380966228613">+38 (096) 622 86 13</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="contacts__item">
+                <a href="mailto:web@rubarbs.com">web@rubarbs.com</a>
+              </li>
+
+              <li class="contacts__item">
+                <a href="https://rubarbs.com/" target="_blank">rubarbs.com</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="feedback">
+          <h2 class="feedback__title">Напишите нам</h2>
+          <form class="feedback__form" name="form">
+            <label>
+              <input class="feedback__input-name" name="name" type="text" placeholder="ИМЯ" />
+            </label>
+            <label>
+              <input
+              class="feedback__input-phone"
+              name="phone"
+              type="text"
+              placeholder="ТЕЛЕФОН"
+            />
+            </label>
+            <label>
+              <input
+              class="feedback__input-email"
+              name="email"
+              type="email"
+              placeholder="EMAIL"
+            />
+            </label>
+            <textarea
+              class="feedback__message"
+              placeholder="СООБЩЕНИЕ"
+              minlength="10"
+              maxlength="100"
+            ></textarea>
+            <button class="feedback__link link link--style--sky" type="submit">
+              Отправить
+            </button>
+            <p class="feedback__gratitude">
+              Спасибо за сообщение!
+              <br />
+              Мы обязательно свяжемся с Вами.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <a href="#">
+          <img
+            class="footer__logo"
+            src="/images/footer/logo-colored.png"
+            alt="logo"
+            width="168px"
+            height="81px"
+          />
+        </a>
+        <nav>
+          <ul class="footer__socials">
+            <li>
+              <a href="https://youtube.com/">
+                <img
+                  src="/images/footer/icon-youtube.png"
+                  alt="youtube"
+                  width="25px"
+                  height="28px"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com/">
+                <img
+                  src="/images/footer/icon-facebook.png"
+                  alt="facebook"
+                  width="11px"
+                  height="27px"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/">
+                <img
+                  src="/images/footer/icon-twitter.png"
+                  alt="twitter"
+                  width="31px"
+                  height="25px"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <span>
+        @ 2017 «Frontend» | сайт разработан в
+        <span class="underline">RUBARB DIGITAL</span>
+      </span>
+    </footer>
   </body>
 </html>

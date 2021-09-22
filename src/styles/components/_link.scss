@@ -1,0 +1,38 @@
+
+.link {
+  display: inline-block;
+  width: 226px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+  font-family: "Myriad Pro";
+  text-align: center;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid gainsboro;
+  }
+
+  &--theme--ghost {
+    background-color: rgba(2, 2, 2, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+  }
+
+  &--theme--winter {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  &--style--sky {
+    background-color: #53d0fb;
+    color: #000000;
+  }
+}

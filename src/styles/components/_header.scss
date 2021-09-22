@@ -1,0 +1,126 @@
+@use 'abstracts' as *;
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  height: 87px;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px 62px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+
+  color: white;
+
+  ul {
+    display: flex;
+  }
+}
+
+.header__nav-links {
+  font-size: 14px;
+  font-family: "Geometria";
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+
+  * + * {
+    margin-left: 40px;
+
+    @include mq(large-m) {
+      margin-left: 10px;
+    }
+
+    @include mq(large-s) {
+      margin-left: 5px;
+    }
+  }
+
+  li,
+  li > a {
+    min-width: 143px;
+    text-align: center;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        width: 50%;
+        height: 2px;
+        background-color: #f7b940;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.header__nav-contacts {
+  margin-left: 44px;
+
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #53d0fb;
+  font-family: "Myriad Pro";
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  line-height: 0.9;
+
+  * + * {
+    margin-left: 15px;
+  }
+
+  @include mq(large-m) {
+    margin-left: 15px;
+  }
+
+  @include mq(large-s) {
+    margin-left: 5px;
+  }
+}
+
+.header__nav-languages {
+  margin-left: 44px;
+
+  font-size: 15px;
+  color: #53d0fb;
+  letter-spacing: 1px;
+
+  font-family: "Myriad Pro";
+  font-weight: normal;
+  line-height: 0.9;
+  font-style: normal;
+  text-align: center;
+
+  * + * {
+    margin-left: 15px;
+  }
+
+  li {
+    &:not(:last-of-type)::after {
+      content: "|";
+      margin-left: 15px;
+    }
+  }
+}
