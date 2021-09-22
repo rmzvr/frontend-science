@@ -2,6 +2,7 @@
 
 .burger-nav {
   display: none;
+
   @include mq(medium-s) {
     display: block;
   }
@@ -9,29 +10,36 @@
 
 .burgermenu-toggle {
   display: block;
+
   position: relative;
   top: 50%;
   left: 50%;
+
   cursor: pointer;
+
   transform: translate(-50%, -50%);
 }
 
 .burgermenu-toggle span {
   display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
+
   position: relative;
 
-  background: #cdcdcd;
+  width: 33px;
+  height: 4px;
+
+  margin-bottom: 5px;
+
   border-radius: 3px;
+
+  background: #cdcdcd;
 }
 
-
 .burgermenu {
-
   position: absolute;
+
   width: 400px;
+
   padding: 50px;
 
   background: #ededed;
@@ -42,11 +50,9 @@
 
 .burgermenu li {
   padding: 10px 0;
-  font-size: 22px;
 
   font-family: "Geometria";
-  font-weight: normal;
-  font-style: normal;
+  font-size: 22px;
 }
 
 .burgermenu a[data-language] {

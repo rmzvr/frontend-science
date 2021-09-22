@@ -1,11 +1,11 @@
 .carousel {
+  display: flex;
+  align-items: flex-end;
+
   position: relative;
 
   width: 100%;
   height: 100%;
-
-  display: flex;
-  align-items: flex-end;
 }
 
 .carousel-track {
@@ -19,11 +19,14 @@
   position: absolute;
   top: 0;
   left: 0;
+
   width: 101%;
   height: 100%;
+
   background-position: -10px -10px;
   background-repeat: no-repeat;
   background-size: cover;
+
   transition: all ease 1s;
 
   &.invisible {
@@ -49,11 +52,11 @@
 
 .carousel__button {
   position: absolute;
+  z-index: 1000;
+
   height: calc(963px - 87px);
 
   padding: 0 22px;
-
-  z-index: 1000;
 }
 
 .carousel__button:first-of-type {
@@ -78,12 +81,11 @@
   position: absolute;
   bottom: 22px;
   left: 50%;
-
-  transform: translateX(-50%);
+  z-index: 100;
 
   height: 3px;
 
-  z-index: 100;
+  transform: translateX(-50%);
 
   * + * {
     margin-left: 7px;

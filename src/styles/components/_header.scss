@@ -25,24 +25,22 @@
   justify-content: center;
   align-items: center;
 
-  text-transform: uppercase;
-
   color: white;
 
-  ul {
-    display: flex;
-  }
+  text-transform: uppercase;
 
   @include mq(medium-s) {
     display: none;
   }
+
+  ul {
+    display: flex;
+  }
 }
 
 .header__nav-links {
-  font-size: 14px;
   font-family: "Geometria";
-  font-weight: normal;
-  font-style: normal;
+  font-size: 14px;
   text-align: center;
 
   * + * {
@@ -59,20 +57,26 @@
 
   li,
   li > a {
-    min-width: 143px;
-    text-align: center;
     position: relative;
+
+    min-width: 143px;
+    
+    text-align: center;
 
     &:hover,
     &:focus {
       &::after {
         content: "";
+
         position: absolute;
         bottom: -35px;
         left: 50%;
+
         width: 50%;
         height: 2px;
+
         background-color: #f7b940;
+
         transform: translateX(-50%);
       }
     }
@@ -83,17 +87,11 @@
   margin-left: 44px;
 
   font-size: 15px;
-  letter-spacing: 1px;
-  color: #53d0fb;
-  font-family: "Myriad Pro";
-  font-weight: normal;
-  font-style: normal;
-  text-align: center;
   line-height: 0.9;
+  letter-spacing: 1px;
+  text-align: center;
 
-  * + * {
-    margin-left: 15px;
-  }
+  color: #53d0fb;
 
   @include mq(large-m) {
     margin-left: 15px;
@@ -102,20 +100,21 @@
   @include mq(large-s) {
     margin-left: 5px;
   }
+
+  * + * {
+    margin-left: 15px;
+  }
 }
 
 .header__nav-languages {
   margin-left: 44px;
 
   font-size: 15px;
-  color: #53d0fb;
-  letter-spacing: 1px;
-
-  font-family: "Myriad Pro";
-  font-weight: normal;
   line-height: 0.9;
-  font-style: normal;
+  letter-spacing: 1px;
   text-align: center;
+
+  color: #53d0fb;
 
   * + * {
     margin-left: 15px;
@@ -124,6 +123,7 @@
   li {
     &:not(:last-of-type)::after {
       content: "|";
+      
       margin-left: 15px;
     }
   }

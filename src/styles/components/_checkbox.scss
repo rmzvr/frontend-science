@@ -1,26 +1,21 @@
-:root {
-  --color: rgba(128, 128, 128, 0.5);
-  --disabled: #959495;
-}
-
 .checkbox {
   display: grid;
   grid-template-columns: min-content auto;
   grid-gap: 0.5em;
-  font-size: 2rem;
-  color: var(--color);
 
-  &--disabled {
-    color: var(--disabled);
-  }
+  font-size: 2rem;
+
+  color: rgba(128, 128, 128, 0.5);
 }
 
 .checkbox__control {
   display: inline-grid;
+
   width: 1em;
   height: 1em;
-  border-radius: 0.25em;
+
   border: 0.1em solid currentColor;
+  border-radius: 0.25em;
 
   svg {
     transition: transform 0.1s ease-in 25ms;
@@ -38,9 +33,10 @@
   }
 
   input {
-    opacity: 0;
     width: 1em;
     height: 1em;
+
+    opacity: 0;
 
     &:checked + .checkbox__control svg {
       transform: scale(1);

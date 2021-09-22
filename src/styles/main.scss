@@ -36,7 +36,7 @@ p {
   font-size: 37px;
   line-height: 44px;
 
-  color: #000000;
+  color: rgb(0, 0, 0);
 
   @include mq(medium-s) {
     display: none;
@@ -56,7 +56,7 @@ p {
 
   font-size: 22px;
 
-  color: #000000;
+  color: black;
 
   @include mq(medium-s) {
     margin: auto;
@@ -76,12 +76,13 @@ blockquote {
   text-align: center;
   text-transform: uppercase;
 
-  border: 4px solid #53d0fb;
+  border: 4px solid rgb(83, 208, 251);
 
-  color: #000000;
+  color: rgb(0, 0, 0);
 
   @include mq(medium-s) {
     max-width: 44ch;
+    
     padding: 38px 75px;
   }
 }
@@ -94,15 +95,16 @@ blockquote {
 
   padding: 68px 0 52px;
 
-  background-color: #f4f4f4;
+  background-color: rgb(244, 244, 244);
 }
 
 .infographics__item {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  position: relative;
 
   &:not(:last-of-type) {
     margin-right: 150px;
@@ -113,11 +115,12 @@ blockquote {
     left: -32px;
     bottom: -25px;
 
-    font-size: 100px;
-    color: #000000;
-    font-weight: bold;
     font-family: "Geometria";
+    font-size: 100px;
+    font-weight: bold;
     text-align: center;
+
+    color: rgb(0, 0, 0);
   }
 
   &:nth-of-type(2) {
@@ -133,11 +136,13 @@ blockquote {
 
   &:nth-of-type(2)::before {
     content: "2";
+
     font-weight: bold;
   }
 
   &:nth-of-type(3)::before {
     content: "3";
+
     font-weight: bold;
   }
 }
@@ -145,49 +150,56 @@ blockquote {
 .infographics__item-title {
   margin-top: 48px;
   margin-bottom: 0px;
+  padding-left: 14px;
 
   font-size: 30px;
-  color: #000000;
   font-weight: bold;
 
-  padding-left: 14px;
+  color: rgb(0, 0, 0);
 }
 
 .infographics__item-description {
+  width: 100%;
+  max-width: 16ch;
+
+  margin: 0;
   padding-left: 14px;
 
-  width: 100%;
-  margin: 0;
-  font-size: 18px;
-  color: #000000;
   font-family: "Geometria";
-  max-width: 16ch;
+  font-size: 18px;
+
+  color: rgb(0, 0, 0);
 }
 
 .performance {
-  padding-top: 142px;
-  padding-bottom: 190px;
   width: 100%;
   max-width: 1207px;
+
   margin: 0 auto;
+  padding-top: 142px;
+  padding-bottom: 190px;
 }
 
 .performance__title {
-  font-size: 37px;
-  line-height: 44px;
-  color: #000000;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
   max-width: 42ch;
+
   margin: 0 auto;
   margin-bottom: 34px;
+
+  font-size: 37px;
+  line-height: 44px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: rgb(0, 0, 0);
 }
 
 .performance__article {
-  position: relative;
   display: flex;
   justify-content: space-between;
+
+  position: relative;
 
   &:not(:last-of-type) {
     margin-bottom: 100px;
@@ -200,28 +212,35 @@ blockquote {
   }
 
   .performance__article-title {
+    display: inline-block;
+
     position: absolute;
     top: 36px;
     left: -10px;
-    display: inline-block;
-    font-size: 36px;
-    color: #000000;
-    font-weight: bold;
 
-    text-transform: uppercase;
-    border: 3px solid #53d0fb;
     padding: 55px 25px 55px 46px;
+
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border: 3px solid rgb(83, 208, 251);
+
+    color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.4);
   }
 
   .performance__article-description {
-    font-size: 24px;
-    color: #000000;
-    font-weight: 300;
-    font-family: "Geometria";
-    text-transform: lowercase;
     max-width: 17ch;
+
     margin-left: 30px;
+
+    font-family: "Geometria";
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: lowercase;
+
+    color: rgb(0, 0, 0);
   }
 
   .performance__link {
@@ -243,13 +262,15 @@ blockquote {
     top: 36px;
     left: inherit;
     right: -10px;
+
     padding: 55px 50px 55px 242px;
   }
 
   .performance__article-description {
-    text-align: right;
     margin-left: 0;
     margin-right: 50px;
+
+    text-align: right;
 
     &::first-letter {
       text-transform: uppercase;
@@ -262,21 +283,26 @@ blockquote {
 }
 
 .contacts {
-  position: relative;
   display: flex;
   justify-content: center;
-  padding: 100px 0;
+
+  position: relative;
+
   max-height: 678px;
+
+  padding: 100px 0;
 
   &::before {
     content: "";
+
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(/images/contacts/background.png);
     z-index: -1;
+
+    background-image: url(/images/contacts/background.png);
   }
 
   @include mq(medium-s) {
@@ -294,11 +320,13 @@ blockquote {
 
 .contacts__title,
 .feedback__title {
-  font-size: 25px;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: bold;
   margin-bottom: 70px;
+
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  color: #ffffff;
 }
 
 .contacts__title {
@@ -307,10 +335,13 @@ blockquote {
 
 .contacts__item {
   position: relative;
+
+  max-width: 25ch;
+
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
-  max-width: 25ch;
+
+  color: rgb(255, 255, 255);
 
   &:not(:last-of-type) {
     margin-bottom: 52px;
@@ -324,11 +355,13 @@ blockquote {
 
   &:nth-of-type(1)::before {
     content: url(/images/contacts/icon-address.png);
+
     top: 10px;
   }
 
   &:nth-of-type(2)::before {
     content: url(/images/contacts/icon-phone.png);
+
     top: 10px;
   }
 
@@ -349,6 +382,7 @@ blockquote {
 
   @include mq(medium-s) {
     column-gap: 20px;
+
     max-width: 606px;
   }
 
@@ -360,26 +394,31 @@ blockquote {
     position: absolute;
     bottom: -23px;
     left: 0;
-    color: lightcoral;
+
+    color: rgb(240, 128, 128);
   }
 
   input {
     width: 100%;
     height: 44px;
-    border: 1px solid #ffffff;
-    font-size: 15px;
-    color: #ffffff;
 
-    background-color: rgba(4, 0, 19, 0.1);
     padding: 18px 0 18px 13px;
+
+    font-size: 15px;
+
+    border: 1px solid rgb(255, 255, 255);
+
+    color: rgb(255, 255, 255);
+    background-color: rgba(4, 0, 19, 0.1);
 
     @include mq(medium-s) {
       max-width: 130px;
     }
 
     &::placeholder {
-      opacity: 1;
       text-transform: uppercase;
+
+      opacity: 1;
     }
   }
 
@@ -387,18 +426,23 @@ blockquote {
     grid-column: 1/4;
 
     height: 200px;
-    border: 1px solid #ffffff;
-    font-size: 15px;
-    color: #ffffff;
-    background-color: rgba(4, 0, 19, 0.1);
 
-    padding: 14px;
-    resize: none;
     margin-top: 30px;
     margin-bottom: 75px;
+    padding: 14px;
+
+    font-size: 15px;
+
+    border: 1px solid rgb(255, 255, 255);
+
+    color: rgb(255, 255, 255);
+    background-color: rgba(4, 0, 19, 0.1);
+
+    resize: none;
 
     @include mq(medium-s) {
       max-width: 471px;
+
       margin-bottom: 42px;
     }
 
@@ -408,6 +452,7 @@ blockquote {
 
     &::placeholder {
       opacity: 1;
+
       text-transform: uppercase;
     }
   }
@@ -415,20 +460,24 @@ blockquote {
   .feedback__link {
     @include mq(medium-s) {
       display: inline-block;
+
       max-width: 151px;
     }
   }
 
   .feedback__gratitude {
     grid-column: 2/4;
-    margin: 0;
-    font-size: 20px;
-    color: #ffffff;
 
-    font-weight: 500;
     max-width: 30ch;
-    line-height: 30px;
+
+    margin: 0;
     margin-left: 10px;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+
+    color: rgb(255, 255, 255);
 
     @include mq(medium-s) {
       font-size: 17px;

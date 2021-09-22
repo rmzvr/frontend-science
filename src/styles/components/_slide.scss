@@ -10,14 +10,15 @@
 }
 
 .slide__title {
+  max-width: 32ch;
+
+  margin-bottom: 57px;
+
   font-size: 47px;
   line-height: 62px;
-  color: #ffffff;
-  font-weight: normal;
-  font-family: "Myriad Pro";
   text-align: center;
-  max-width: 32ch;
-  margin-bottom: 57px;
+
+  color: rgb(255, 255, 255);
 
   text-transform: uppercase;
 

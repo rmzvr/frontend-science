@@ -85,12 +85,14 @@ const watch = () => {
     gulp.watch('src/images/**/*.*', images);
 }
 
+// gulp
 exports.default = gulp.series(
     deleteBuild,
     gulp.parallel(html, fonts, styles, scripts, images),
     gulp.parallel(watch, server)
 )
 
+// gulp build --prod
 exports.build = gulp.series(
     deleteBuild,
     gulp.parallel(html, fonts, styles, scripts, images),
