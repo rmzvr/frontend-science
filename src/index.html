@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="shortcut icon" href="/images/contacts/icon-website.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/contacts/icon-website.png" type="image/x-icon" />
     <link rel="stylesheet" href="/styles/main.css" />
     <script src="/scripts/main.js" defer></script>
   </head>
@@ -13,12 +13,7 @@
   <body>
     <header class="header">
       <a href="#">
-        <img
-          src="/images/header/logo-header.png"
-          alt="logo"
-          width="140px"
-          height="68px"
-        />
+        <img src="/images/header/logo-header.png" alt="logo" width="140" height="68" />
       </a>
 
       <nav class="header__nav">
@@ -69,18 +64,38 @@
           <span></span>
           <span></span>
           <ul class="burgermenu" hidden>
-            <a href="#slides"><li>Первый экран</li></a>
-            <a href="#introduction"><li>Вступление</li></a>
-            <a href="#infographics"><li>Инфографикa</li></a>
-            <a href="#performance"><li>Производительность</li></a>
-            <a href="#performance"><li>Контакты</li></a>
-            <hr>
-            <a href="tel:+380966228613"><li>+38 (096) 622 86 13</li></a>
-            <a href="tel:+380966228613"><li>+38 (096) 622 86 13</li></a>
-            <hr>
-            <a href="#" data-language="EN"><li>EN</li></a>
-            <a href="#" data-language="UA"><li>UA</li></a>
-            <a href="#" data-language="RU"><li>RU</li></a>
+            <li>
+              <a href="#slides">Первый экран</a>
+            </li>
+            <li>
+              <a href="#introduction">Вступление</a>
+            </li>
+            <li>
+              <a href="#infographics">Инфографикa</a>
+            </li>
+            <li>
+              <a href="#performance">Производительность</a>
+            </li>
+            <li>
+              <a href="#contacts">Контакты</a>
+            </li>
+
+            <li><hr /></li>
+
+            <li>
+              <a href="tel:+380966228613">+38 (096) 622 86 13</a>
+            </li>
+            <li>
+              <a href="tel:+380966228613">+38 (096) 622 86 13</a>
+            </li>
+
+            <li><hr /></li>
+
+            <li>
+              <a href="#" data-language="EN">EN</a>
+              <a href="#" data-language="UA">RU</a>
+              <a href="#" data-language="RU">UA</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -90,24 +105,12 @@
       <section class="slides" id="slides">
         <div class="carousel">
           <button class="carousel__button" data-button-type="left">
-            <img
-              src="/images/slides/carousel-arrow-left.png"
-              alt="arrow-left"
-            />
+            <img src="/images/slides/carousel-arrow-left.png" alt="arrow-left" />
           </button>
           <div class="carousel-track">
             <div class="carousel-track__slide slide">
-              <img
-                class="slide__image"
-                src="/images/slides/logo-colored.png"
-                alt="logo"
-                width="565px"
-                height="271px"
-              />
-              <h1 class="slide__title">
-                <span class="bold">Frontend-разработчики</span> должны быть в
-                теме всего
-              </h1>
+              <img class="slide__image" src="/images/slides/logo-colored.png" alt="logo" width="565" height="271" />
+              <h1 class="slide__title"><span class="bold">Frontend-разработчики</span> должны быть в теме всего</h1>
               <div class="slide__buttons-wrapper">
                 <a class="link link--theme--ghost" href="#">да, должны</a>
                 <a class="link link--theme--winter" href="#">конечно, должны</a>
@@ -117,10 +120,7 @@
             <div class="carousel-track__slide slide"></div>
           </div>
           <button class="carousel__button" data-button-type="right">
-            <img
-              src="/images/slides/carousel-arrow-right.png"
-              alt="arrow-right"
-            />
+            <img src="/images/slides/carousel-arrow-right.png" alt="arrow-right" />
           </button>
           <div class="status-bar">
             <div class="status-bar__item status-bar__item--active"></div>
@@ -132,18 +132,8 @@
             <span class="checkbox__input">
               <input type="checkbox" name="checkbox" />
               <span class="checkbox__control">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    d="M1.73 12.91l6.37 6.37L22.79 4.59"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="none" stroke="currentColor" stroke-width="3" d="M1.73 12.91l6.37 6.37L22.79 4.59" />
                 </svg>
               </span>
             </span>
@@ -152,115 +142,92 @@
       </section>
 
       <section class="introduction" id="introduction">
-        <aside class="introduction__aside-socials aside-socials">
-          <div class="aside-socials__text">SHARE</div>
-          <a href="https://twitter.com/">
-            <img src="/images/aside/twitter.png" alt="twitter" width="45px" height="45px">
-          </a>
-          <a href="https://facebook.com/">
-            <img src="/images/aside/facebook.png" alt="facebook" width="45px" height="45px">
-          </a>
-        </aside>
-        <aside class="introduction__aside">
+        <div class="introduction__wrapper">
           <img
+            class="introduction__logo"
             src="/images/introduction/logo-colored.png"
             alt="colored logo"
-            width="382px"
-            height="183px"
+            width="382"
+            height="183"
           />
-          <h2>Мысли Криса Койера</h2>
-        </aside>
+          <h2 class="introduction__title">Мысли Криса Койера</h2>
+        </div>
 
         <div class="introduction__content">
           <p>
             Одна из мыслей которая поселилась в моей голове:
-            <span class="bold"
-              >должен ли frontend-разработчик быть в курсе всего?</span
-            >
+            <span class="bold">должен ли frontend-разработчик быть в курсе всего?</span>
           </p>
 
           <p>
-            В общем смысле, frontend-разработчик может использоваться и на
-            других рабочих местах. Вся команда разработчиков заканчивает
-            разговор на frontend-разработчике. В этом смысл моей идеи.
+            В общем смысле, frontend-разработчик может использоваться и на других рабочих местах. Вся команда
+            разработчиков заканчивает разговор на frontend-разработчике. В этом смысл моей идеи.
           </p>
 
           <p>
-            Frontend-разработчики создают те вещи, с которыми будут
-            взаимодействовать люди. Все этапы разработки проходят вместе с
-            frontend-разработчиком. Возможно, именно поэтому это такая забавная
-            работа!
+            Frontend-разработчики создают те вещи, с которыми будут взаимодействовать люди. Все этапы разработки
+            проходят вместе с frontend-разработчиком. Возможно, именно поэтому это такая забавная работа!
           </p>
 
           <p>
-            Поскольку frontend-разработчик занимает центральное место в цепочке
-            разработки, и при этом мы имеем дело с большим колличеством разных
-            специалистов, мы должны понимать их работу и иногда подсказывать,
-            что и как сделать лучше.
+            Поскольку frontend-разработчик занимает центральное место в цепочке разработки, и при этом мы имеем дело с
+            большим колличеством разных специалистов, мы должны понимать их работу и иногда подсказывать, что и как
+            сделать лучше.
           </p>
 
-          <blockquote class="blockquote">
-            Frontend-разработчик должен разбираться в дизайне
-          </blockquote>
+          <blockquote class="blockquote">Frontend-разработчик должен разбираться в дизайне</blockquote>
 
           <p>
-            Если frontend-разработчик не является сам по себе дизайнером, он
-            должен знать, насколько важен дизайн. Он должен иметь хороший вкус.
-            Он должен знать об инструментах, участвующих непосредственно в
-            разработке.
+            Если frontend-разработчик не является сам по себе дизайнером, он должен знать, насколько важен дизайн. Он
+            должен иметь хороший вкус. Он должен знать об инструментах, участвующих непосредственно в разработке.
           </p>
 
-          <p class="bold">
-            Frontend-разработчик должен разбираться в работе серверной части
-            (backend)
-          </p>
+          <p class="bold">Frontend-разработчик должен разбираться в работе серверной части (backend)</p>
 
           <p>
-            Даже если вы и не backend-разработчик, то вы явно осознаёте всю
-            важность серверной части. Вы понимаете, с чем взаимодействует
-            backend, что передается на сервер, а что нет. Вы знаете об
-            обязанностях backend-разработчика. Вы понимаете, какой язык
-            используется на сервере, и при этом должны уметь обьяснить, что
-            должен дать вам backend и что нужно от серверной части frontend-а.
+            Даже если вы и не backend-разработчик, то вы явно осознаёте всю важность серверной части. Вы понимаете, с
+            чем взаимодействует backend, что передается на сервер, а что нет. Вы знаете об обязанностях
+            backend-разработчика. Вы понимаете, какой язык используется на сервере, и при этом должны уметь обьяснить,
+            что должен дать вам backend и что нужно от серверной части frontend-а.
           </p>
 
-          <p class="bold">
-            Frontend-разработчик должен разбираться в работе сетей
-          </p>
+          <p class="bold">Frontend-разработчик должен разбираться в работе сетей</p>
 
           <p>
-            Frontend-разработчик понимает, что сайты располагаются в интернете,
-            данные передаются по сети, и что сеть - это дикое и непредсказуемое.
-            Необходимо понимать, какие бывают сети, как они работают, и
-            насколько они бывают быстрые и надежные.
+            Frontend-разработчик понимает, что сайты располагаются в интернете, данные передаются по сети, и что сеть -
+            это дикое и непредсказуемое. Необходимо понимать, какие бывают сети, как они работают, и насколько они
+            бывают быстрые и надежные.
           </p>
         </div>
+
+        <aside class="introduction__aside-socials aside-socials">
+          <div class="aside-socials__text">SHARE</div>
+          <a href="https://twitter.com/">
+            <img src="/images/aside/twitter.png" alt="twitter" width="45" height="45" />
+          </a>
+          <a href="https://facebook.com/">
+            <img src="/images/aside/facebook.png" alt="facebook" width="45" height="45" />
+          </a>
+        </aside>
       </section>
 
-      <section class="infographics" id="infographics">
+      <div class="infographics" id="infographics">
         <article class="infographics__item">
           <img
             class="infographics__item-image"
             src="/images/infographics/image1.png"
             alt="infographics image 1"
-            width="283px"
-            height="213px"
+            width="283"
+            height="213"
           />
           <div>
             <h2 class="infographics__item-title">HTML 5</h2>
-            <p class="infographics__item-description">
-              HyperText Markup Language
-            </p>
+            <p class="infographics__item-description">HyperText Markup Language</p>
           </div>
         </article>
 
         <article class="infographics__item">
-          <img
-            src="/images/infographics/image2.png"
-            alt="infographics image 2"
-            width="238px"
-            height="213px"
-          />
+          <img src="/images/infographics/image2.png" alt="infographics image 2" width="238" height="213" />
           <div>
             <h2 class="infographics__item-title">CSS</h2>
             <p class="infographics__item-description">Cascading Style Sheets</p>
@@ -268,23 +235,16 @@
         </article>
 
         <article class="infographics__item">
-          <img
-            src="/images/infographics/image3.png"
-            alt="infographics image 3"
-            width="253px"
-            height="197px"
-          />
+          <img src="/images/infographics/image3.png" alt="infographics image 3" width="253" height="197" />
           <div>
             <h2 class="infographics__item-title">JS</h2>
             <p class="infographics__item-description">JavaScript</p>
           </div>
         </article>
-      </section>
+      </div>
 
       <section class="performance" id="performance">
-        <h2 class="performance__title">
-          Frontend-разработчик должен разбираться в производительности
-        </h2>
+        <h2 class="performance__title">Frontend-разработчик должен разбираться в производительности</h2>
 
         <article class="performance__article">
           <div class="performance__article-wrapper">
@@ -292,37 +252,29 @@
             <p class="performance__article-description">
               Производительность имеет важное место в успехе вашего проекта
             </p>
-            <a class="performance__link link link--style--sky" href="#"
-              >подробнее</a
-            >
+            <a class="performance__link link link--style--sky" href="#">подробнее</a>
           </div>
           <img
             class="performance__article-image"
             src="/images/performance/image1.png"
             alt="photo of the screen showing the computer code"
-            width="800px"
-            height="512px"
+            width="800"
+            height="512"
           />
         </article>
 
-        <article
-          class="performance__article performance__article--type--reversed"
-        >
+        <article class="performance__article performance__article--type--reversed">
           <div class="performance__article-wrapper">
             <h3 class="performance__article-title">Тонкости</h3>
-            <p class="performance__article-description">
-              Необходимо понимать насколько быстрым должен быть backend
-            </p>
-            <a class="performance__link link link--style--sky" href="#"
-              >подробнее</a
-            >
+            <p class="performance__article-description">Необходимо понимать насколько быстрым должен быть backend</p>
+            <a class="performance__link link link--style--sky" href="#">подробнее</a>
           </div>
           <img
             class="performance__article-image"
             src="/images/performance/image2.png"
             alt="a photo of a laptop screen that shows a computer code"
-            width="800px"
-            height="512px"
+            width="800"
+            height="512"
           />
         </article>
       </section>
@@ -332,9 +284,7 @@
           <h2 class="contacts__title">Контакты</h2>
           <address>
             <ul class="contacts__list">
-              <li class="contacts__item">
-                18000, Украина, г. Черкассы, ул. Героев Сталинграда 42/1
-              </li>
+              <li class="contacts__item">18000, Украина, г. Черкассы, ул. Героев Сталинграда 42/1</li>
 
               <li class="contacts__item">
                 <ul>
@@ -361,38 +311,16 @@
           <h2 class="feedback__title">Напишите нам</h2>
           <form class="feedback__form" name="form">
             <label>
-              <input
-                class="feedback__input-name"
-                name="name"
-                type="text"
-                placeholder="ИМЯ"
-              />
+              <input class="feedback__input-name" name="name" type="text" placeholder="ИМЯ" />
             </label>
             <label>
-              <input
-                class="feedback__input-phone"
-                name="phone"
-                type="text"
-                placeholder="ТЕЛЕФОН"
-              />
+              <input class="feedback__input-phone" name="phone" type="text" placeholder="ТЕЛЕФОН" />
             </label>
             <label>
-              <input
-                class="feedback__input-email"
-                name="email"
-                type="email"
-                placeholder="EMAIL"
-              />
+              <input class="feedback__input-email" name="email" type="email" placeholder="EMAIL" />
             </label>
-            <textarea
-              class="feedback__message"
-              placeholder="СООБЩЕНИЕ"
-              minlength="10"
-              maxlength="100"
-            ></textarea>
-            <button class="feedback__link link link--style--sky" type="submit">
-              Отправить
-            </button>
+            <textarea class="feedback__message" placeholder="СООБЩЕНИЕ" minlength="10" maxlength="100"></textarea>
+            <button class="feedback__link link link--style--sky" type="submit">Отправить</button>
             <p class="feedback__gratitude">
               Спасибо за сообщение!
               <br />
@@ -406,44 +334,23 @@
     <footer class="footer">
       <div class="footer__inner">
         <a href="#">
-          <img
-            class="footer__logo"
-            src="/images/footer/logo-colored.png"
-            alt="logo"
-            width="168px"
-            height="81px"
-          />
+          <img class="footer__logo" src="/images/footer/logo-colored.png" alt="logo" width="168" height="81" />
         </a>
         <nav>
           <ul class="footer__socials">
             <li>
               <a href="https://youtube.com/">
-                <img
-                  src="/images/footer/icon-youtube.png"
-                  alt="youtube"
-                  width="25px"
-                  height="28px"
-                />
+                <img src="/images/footer/icon-youtube.png" alt="youtube" width="25" height="28" />
               </a>
             </li>
             <li>
               <a href="https://facebook.com/">
-                <img
-                  src="/images/footer/icon-facebook.png"
-                  alt="facebook"
-                  width="11px"
-                  height="27px"
-                />
+                <img src="/images/footer/icon-facebook.png" alt="facebook" width="11" height="27" />
               </a>
             </li>
             <li>
               <a href="https://twitter.com/">
-                <img
-                  src="/images/footer/icon-twitter.png"
-                  alt="twitter"
-                  width="31px"
-                  height="25px"
-                />
+                <img src="/images/footer/icon-twitter.png" alt="twitter" width="31" height="25" />
               </a>
             </li>
           </ul>

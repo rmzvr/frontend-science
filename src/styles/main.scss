@@ -1,7 +1,7 @@
-@use 'abstracts' as *;
-@use 'base' as *;
-@use 'components' as *;
-@use 'utilities' as *;
+@use "abstracts" as *;
+@use "base" as *;
+@use "components" as *;
+@use "utilities" as *;
 
 // GENERAL =================================================>
 
@@ -33,7 +33,7 @@ p {
 
 .introduction {
   position: relative;
-  
+
   width: 100%;
   max-width: 1256px;
 
@@ -43,34 +43,33 @@ p {
   margin: 0 auto;
   padding: 142px 0 53px;
 
-  @include mq(medium-s) {
+  @include mq(medium-m) {
     padding: 82px 0 33px;
+  }
+
+  @include mq(medium-s) {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 .introduction__aside-socials {
   position: absolute;
-  right: -74px;
+  right: 0;
   bottom: 8px;
 }
 
-.introduction__aside {
+.introduction__logo {
+  margin-bottom: 18px;
+}
+
+.introduction__title {
+  margin-left: 5px;
+
   font-size: var(--fs-700);
   line-height: 44px;
 
   color: var(--clr-black);
-
-  @include mq(medium-s) {
-    display: none;
-  }
-
-  img {
-    margin-bottom: 18px;
-  }
-
-  h2 {
-    margin-left: 5px;
-  }
 }
 
 .introduction__content {
@@ -80,8 +79,12 @@ p {
 
   color: var(--clr-black);
 
-  @include mq(medium-s) {
+  @include mq(medium-m) {
     margin: auto;
+  }
+
+  @include mq(medium-s) {
+    margin-top: 40px;
   }
 
   p {
@@ -102,9 +105,9 @@ p {
 
   color: var(--clr-black);
 
-  @include mq(medium-s) {
+  @include mq(medium-m) {
     max-width: 44ch;
-    
+
     padding: 38px 75px;
   }
 }
@@ -120,6 +123,11 @@ p {
   padding: 68px 0 52px;
 
   background-color: var(--clr-light-gray);
+
+  @include mq(small) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .infographics__item {
@@ -132,6 +140,10 @@ p {
 
   &:not(:last-of-type) {
     margin-right: 150px;
+    @include mq(small) {
+      margin-right: 0;
+      margin-bottom: 70px;
+    }
   }
 
   &::before {
@@ -202,8 +214,10 @@ p {
   max-width: 1207px;
 
   margin: 0 auto;
-  padding-top: 142px;
+  padding-top: 100px;
   padding-bottom: 190px;
+
+  overflow: hidden;
 }
 
 .performance__title {
@@ -235,15 +249,17 @@ p {
 .performance__article-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .performance__article-title {
   display: inline-block;
 
-  position: absolute;
-  top: 36px;
-  left: -10px;
+  position: relative;
+  left: 88px;
+
+  width: 25ch;
 
   padding: 55px 25px 55px 46px;
 
@@ -260,7 +276,7 @@ p {
 .performance__article-description {
   max-width: 17ch;
 
-  margin-left: 30px;
+  margin: 0;
 
   font-family: "Geometria";
   font-size: var(--fs-500);
@@ -270,41 +286,18 @@ p {
   color: var(--clr-black);
 }
 
-.performance__link {
-  margin: 30px 0 50px 40px;
-}
-
 .performance__article--type--reversed {
-  display: flex;
   flex-direction: row-reverse;
 
-  .performance__article-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-  }
-
   .performance__article-title {
-    top: 36px;
     left: inherit;
-    right: -10px;
+    right: 88px;
 
     padding: 55px 50px 55px 242px;
   }
 
   .performance__article-description {
-    margin-left: 0;
-    margin-right: 50px;
-
     text-align: right;
-
-    &::first-letter {
-      text-transform: uppercase;
-    }
-  }
-
-  .performance__link {
-    margin: 30px 0 50px 70px;
   }
 }
 
@@ -318,7 +311,7 @@ p {
 
   max-height: 678px;
 
-  padding: 100px 0;
+  padding: 100px 20px 100px 60px;
 
   &::before {
     content: "";
@@ -333,9 +326,9 @@ p {
     background-image: url(/images/contacts/background.png);
   }
 
-  @include mq(medium-s) {
-    padding: 100px 0;
-  }
+  // @include mq(small-s) {
+  //   padding: 100px 0;
+  // }
 }
 
 .contacts__inner {
@@ -410,7 +403,7 @@ p {
   grid-template-rows: repeat(3, auto);
   column-gap: 30px;
 
-  @include mq(medium-s) {
+  @include mq(small-s) {
     column-gap: 20px;
 
     max-width: 606px;
@@ -423,7 +416,7 @@ p {
       position: absolute;
       bottom: -25px;
       left: 0;
-  
+
       color: var(--clr-light-pink);
     }
   }
@@ -444,7 +437,7 @@ p {
   color: var(--clr-white);
   background-color: var(--clr-black-opacity-900);
 
-  @include mq(medium-s) {
+  @include mq(small-s) {
     max-width: 130px;
   }
 
@@ -473,7 +466,7 @@ p {
 
   resize: none;
 
-  @include mq(medium-s) {
+  @include mq(small-s) {
     max-width: 471px;
 
     margin-bottom: 42px;
@@ -491,7 +484,9 @@ p {
 }
 
 .feedback__link {
-  @include mq(medium-s) {
+  align-self: center;
+
+  @include mq(small-s) {
     display: inline-block;
 
     max-width: 151px;
@@ -512,7 +507,7 @@ p {
 
   color: var(--clr-white);
 
-  @include mq(medium-s) {
+  @include mq(small-s) {
     font-size: var(--fs-200);
   }
 }

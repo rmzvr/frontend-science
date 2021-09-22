@@ -29,7 +29,7 @@
 
   text-transform: uppercase;
 
-  @include mq(medium-s) {
+  @include mq(medium-m) {
     display: none;
   }
 

@@ -1,14 +1,18 @@
 const slides = document.querySelectorAll(".carousel-track__slide");
 const statusBarItems = document.querySelectorAll(".status-bar__item");
+
+const checkbox = document.querySelector(".checkbox");
+
 const buttons = document.querySelectorAll(".carousel__button");
 const leftArrowButton = buttons[0];
 const rightArrowButton = buttons[1];
-const checkbox = document.querySelector(".checkbox");
+
 const form = document.forms.form;
 const inputs = document.querySelectorAll(".feedback__form input");
 
 const burgermenu = document.querySelector('.burgermenu');
 const burgermenuToggle = document.querySelector('.burgermenu-toggle');
+
 let intervalID;
 let current = 0;
 

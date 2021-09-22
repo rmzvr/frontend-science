@@ -3,7 +3,7 @@
 .burger-nav {
   display: none;
 
-  @include mq(medium-s) {
+  @include mq(medium-m) {
     display: block;
   }
 }
@@ -55,6 +55,6 @@
   font-size: var(--fs-400);
 }
 
-.burgermenu a[data-language] {
+.burgermenu li a[data-language] {
   display: inline-block;
 }
