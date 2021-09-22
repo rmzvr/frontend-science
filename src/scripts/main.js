@@ -6,11 +6,18 @@ const rightArrowButton = buttons[1];
 const checkbox = document.querySelector(".checkbox");
 const form = document.forms.form;
 const inputs = document.querySelectorAll(".feedback__form input");
+
+const burgermenu = document.querySelector('.burgermenu');
+const burgermenuToggle = document.querySelector('.burgermenu-toggle');
 let intervalID;
 let current = 0;
 
 carousel();
 form.reset();
+
+burgermenuToggle.addEventListener('click', () => {
+  burgermenu.hidden = !burgermenu.hidden;
+});
 
 intervalID = setInterval(() => {
   if (current + 1 === slides.length) {

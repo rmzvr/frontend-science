@@ -98,16 +98,12 @@ blockquote {
 
 .infographics {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   width: 100%;
   background-color: #f4f4f4;
 
-  padding: 68px 270px 52px;
-
-  @include mq(medium) {
-    padding: 68px 100px 52px;
-  }
+  padding: 68px 0 52px;
 }
 
 .infographics__item {
@@ -116,6 +112,10 @@ blockquote {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  &:not(:last-of-type) {
+    margin-right: 150px;
+  }
 
   &::before {
     position: absolute;
@@ -187,10 +187,10 @@ blockquote {
   max-width: 1207px;
   margin: 0 auto;
 
-  @include mq(medium-s) {
-    padding-top: 102px;
-    padding-bottom: 150px;
-  }
+  // @include mq(medium-s) {
+  //   padding-top: 102px;
+  //   padding-bottom: 150px;
+  // }
 }
 
 .performance__title {
@@ -206,10 +206,10 @@ blockquote {
   margin: 0 auto;
   margin-bottom: 34px;
 
-  @include mq(medium-s) {
-    max-width: 35ch;
-    margin-bottom: 50px;
-  }
+  // @include mq(medium-s) {
+  //   max-width: 35ch;
+  //   margin-bottom: 50px;
+  // }
 }
 
 .performance__article {
@@ -227,12 +227,12 @@ blockquote {
     justify-content: end;
   }
 
-  .performance__article-image {
-    @include mq(medium-s) {
-      width: 500px;
-      height: 350px;
-    }
-  }
+  // .performance__article-image {
+  //   @include mq(medium-s) {
+  //     width: 500px;
+  //     height: 350px;
+  //   }
+  // }
 
   .performance__article-title {
     position: absolute;
@@ -248,11 +248,11 @@ blockquote {
     padding: 55px 25px 55px 46px;
     background-color: rgba(255, 255, 255, 0.4);
 
-    @include mq(medium-s) {
-      top: 12px;
-      left: 115px;
-      padding: 35px 25px 35px 36px;
-    }
+    // @include mq(medium-s) {
+    //   top: 12px;
+    //   left: 115px;
+    //   padding: 35px 25px 35px 36px;
+    // }
   }
 
   .performance__article-description {
@@ -264,18 +264,18 @@ blockquote {
     max-width: 17ch;
     margin-left: 30px;
 
-    @include mq(medium-s) {
-      margin-left: 70px;
-      margin-bottom: -20px;
-    }
+    // @include mq(medium-s) {
+    //   margin-left: 70px;
+    //   margin-bottom: -20px;
+    // }
   }
 
   .performance__link {
     margin: 30px 0 50px 40px;
 
-    @include mq(medium-s) {
-      margin: 38px 0 27px 79px;
-    }
+    // @include mq(medium-s) {
+    //   margin: 38px 0 27px 79px;
+    // }
   }
 }
 
@@ -295,11 +295,11 @@ blockquote {
     right: -10px;
     padding: 55px 50px 55px 242px;
 
-    @include mq(medium-s) {
-      top: 18px;
-      right: 130px;
-      padding: 45px 40px 45px 222px;
-    }
+    // @include mq(medium-s) {
+    //   top: 18px;
+    //   right: 130px;
+    //   padding: 45px 40px 45px 222px;
+    // }
   }
 
   .performance__article-description {
@@ -311,19 +311,19 @@ blockquote {
       text-transform: uppercase;
     }
 
-    @include mq(medium-s) {
-      margin-left: 23px;
-      margin-right: 105px;
-      margin-bottom: -52px;
-    }
+    // @include mq(medium-s) {
+    //   margin-left: 23px;
+    //   margin-right: 105px;
+    //   margin-bottom: -52px;
+    // }
   }
 
   .performance__link {
     margin: 30px 0 50px 70px;
 
-    @include mq(medium-s) {
-      margin: 73px 0 6px 67px;
-    }
+    // @include mq(medium-s) {
+    //   margin: 73px 0 6px 67px;
+    // }
   }
 }
 
@@ -331,7 +331,7 @@ blockquote {
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 100px 390px;
+  padding: 100px 0;
   max-height: 678px;
 
   &::before {
@@ -341,12 +341,12 @@ blockquote {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(/images/last/background.png);
+    background-image: url(/images/contacts/background.png);
     z-index: -1;
   }
 
   @include mq(medium-s) {
-    padding: 100px 91px;
+    padding: 100px 0;
   }
 }
 
@@ -393,21 +393,21 @@ blockquote {
   }
 
   &:nth-of-type(1)::before {
-    content: url(/images/last/icon-address.png);
+    content: url(/images/contacts/icon-address.png);
     top: 10px;
   }
 
   &:nth-of-type(2)::before {
-    content: url(/images/last/icon-phone.png);
+    content: url(/images/contacts/icon-phone.png);
     top: 10px;
   }
 
   &:nth-of-type(3)::before {
-    content: url(/images/last/icon-mail.png);
+    content: url(/images/contacts/icon-mail.png);
   }
 
   &:nth-of-type(4)::before {
-    content: url(/images/last/icon-website.png);
+    content: url(/images/contacts/icon-website.png);
   }
 }
 

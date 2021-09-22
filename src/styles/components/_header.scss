@@ -32,6 +32,10 @@
   ul {
     display: flex;
   }
+
+  @include mq(medium-s) {
+    display: none;
+  }
 }
 
 .header__nav-links {
