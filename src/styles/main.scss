@@ -32,6 +32,8 @@ p {
 // Introduction =========================================>
 
 .introduction {
+  position: relative;
+  
   width: 100%;
   max-width: 1256px;
 
@@ -44,6 +46,12 @@ p {
   @include mq(medium-s) {
     padding: 82px 0 33px;
   }
+}
+
+.introduction__aside-socials {
+  position: absolute;
+  right: -74px;
+  bottom: 8px;
 }
 
 .introduction__aside {
