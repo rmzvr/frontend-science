@@ -1,2 +1,8 @@
 @use 'font-face' as *;
 @use 'abstracts' as *;
+
+body {
+  font-family: "Myriad Pro";
+  font-weight: normal;
+  font-style: normal;
+}

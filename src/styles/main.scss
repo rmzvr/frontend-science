@@ -1,25 +1,30 @@
 @use 'abstracts' as *;
 @use 'base' as *;
 @use 'components' as *;
-@use './utilities/container' as *;
-@use './utilities/hidden' as *;
+@use 'utilities' as *;
 
 html {
   scroll-behavior: smooth;
 }
 
+p {
+  margin: 36px 0;
+}
+
 .slides {
   height: 963px;
+
   overflow: hidden;
 }
 
 .introduction {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   max-width: 1256px;
-  margin: 0 auto;
 
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 auto;
   padding: 142px 0 53px;
 
   @include mq(medium-s) {
@@ -30,11 +35,12 @@ html {
 .introduction__aside {
   font-size: 37px;
   line-height: 44px;
+
   color: #000000;
-  font-family: "Myriad Pro";
-  font-weight: normal;
-  font-style: normal;
-  text-transform: uppercase;
+
+  @include mq(medium-s) {
+    display: none;
+  }
 
   img {
     margin-bottom: 18px;
@@ -43,52 +49,36 @@ html {
   h2 {
     margin-left: 5px;
   }
-
-  @include mq(medium-s) {
-    display: none;
-  }
 }
 
 .introduction__content {
-  font-family: "Myriad Pro";
-  font-weight: normal;
-  font-style: normal;
-
   margin-left: 104px;
 
   font-size: 22px;
-  color: #000000;
 
-  p {
-    max-width: 64ch;
-  }
+  color: #000000;
 
   @include mq(medium-s) {
     margin: auto;
   }
-}
 
-p {
-  margin: 36px 0;
-}
-
-.bold {
-  font-family: "Myriad Pro";
-  font-weight: bold;
-  font-style: normal;
+  p {
+    max-width: 64ch;
+  }
 }
 
 blockquote {
-  font-size: 32px;
-  color: #000000;
-  font-family: "Myriad Pro";
-  font-weight: bold;
-  font-style: normal;
-  text-align: center;
-  text-transform: uppercase;
   margin: 100px 0 100px 5px;
   padding: 58px 115px;
+
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+
   border: 4px solid #53d0fb;
+
+  color: #000000;
 
   @include mq(medium-s) {
     max-width: 44ch;
@@ -97,13 +87,14 @@ blockquote {
 }
 
 .infographics {
+  width: 100%;
+
   display: flex;
   justify-content: center;
 
-  width: 100%;
-  background-color: #f4f4f4;
-
   padding: 68px 0 52px;
+
+  background-color: #f4f4f4;
 }
 
 .infographics__item {
@@ -125,7 +116,6 @@ blockquote {
     font-size: 100px;
     color: #000000;
     font-weight: bold;
-    font-style: normal;
     font-family: "Geometria";
     text-align: center;
   }
@@ -144,13 +134,11 @@ blockquote {
   &:nth-of-type(2)::before {
     content: "2";
     font-weight: bold;
-    font-family: "Myriad Pro";
   }
 
   &:nth-of-type(3)::before {
     content: "3";
     font-weight: bold;
-    font-family: "Myriad Pro";
   }
 }
 
@@ -161,8 +149,6 @@ blockquote {
   font-size: 30px;
   color: #000000;
   font-weight: bold;
-  font-family: "Myriad Pro";
-  font-style: normal;
 
   padding-left: 14px;
 }
@@ -175,8 +161,6 @@ blockquote {
   font-size: 18px;
   color: #000000;
   font-family: "Geometria";
-  font-weight: normal;
-  font-style: normal;
   max-width: 16ch;
 }
 
@@ -186,11 +170,6 @@ blockquote {
   width: 100%;
   max-width: 1207px;
   margin: 0 auto;
-
-  // @include mq(medium-s) {
-  //   padding-top: 102px;
-  //   padding-bottom: 150px;
-  // }
 }
 
 .performance__title {
@@ -198,18 +177,11 @@ blockquote {
   line-height: 44px;
   color: #000000;
   font-weight: bold;
-  font-style: normal;
   text-transform: uppercase;
-  font-family: "Myriad Pro";
   text-align: center;
   max-width: 42ch;
   margin: 0 auto;
   margin-bottom: 34px;
-
-  // @include mq(medium-s) {
-  //   max-width: 35ch;
-  //   margin-bottom: 50px;
-  // }
 }
 
 .performance__article {
@@ -227,13 +199,6 @@ blockquote {
     justify-content: end;
   }
 
-  // .performance__article-image {
-  //   @include mq(medium-s) {
-  //     width: 500px;
-  //     height: 350px;
-  //   }
-  // }
-
   .performance__article-title {
     position: absolute;
     top: 36px;
@@ -242,17 +207,11 @@ blockquote {
     font-size: 36px;
     color: #000000;
     font-weight: bold;
-    font-family: "Myriad Pro";
+
     text-transform: uppercase;
     border: 3px solid #53d0fb;
     padding: 55px 25px 55px 46px;
     background-color: rgba(255, 255, 255, 0.4);
-
-    // @include mq(medium-s) {
-    //   top: 12px;
-    //   left: 115px;
-    //   padding: 35px 25px 35px 36px;
-    // }
   }
 
   .performance__article-description {
@@ -263,19 +222,10 @@ blockquote {
     text-transform: lowercase;
     max-width: 17ch;
     margin-left: 30px;
-
-    // @include mq(medium-s) {
-    //   margin-left: 70px;
-    //   margin-bottom: -20px;
-    // }
   }
 
   .performance__link {
     margin: 30px 0 50px 40px;
-
-    // @include mq(medium-s) {
-    //   margin: 38px 0 27px 79px;
-    // }
   }
 }
 
@@ -294,12 +244,6 @@ blockquote {
     left: inherit;
     right: -10px;
     padding: 55px 50px 55px 242px;
-
-    // @include mq(medium-s) {
-    //   top: 18px;
-    //   right: 130px;
-    //   padding: 45px 40px 45px 222px;
-    // }
   }
 
   .performance__article-description {
@@ -310,20 +254,10 @@ blockquote {
     &::first-letter {
       text-transform: uppercase;
     }
-
-    // @include mq(medium-s) {
-    //   margin-left: 23px;
-    //   margin-right: 105px;
-    //   margin-bottom: -52px;
-    // }
   }
 
   .performance__link {
     margin: 30px 0 50px 70px;
-
-    // @include mq(medium-s) {
-    //   margin: 73px 0 6px 67px;
-    // }
   }
 }
 
@@ -364,7 +298,6 @@ blockquote {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: "Myriad Pro";
   margin-bottom: 70px;
 }
 
@@ -377,9 +310,6 @@ blockquote {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
-  font-weight: normal;
-  font-style: normal;
-  font-family: "Myriad Pro";
   max-width: 25ch;
 
   &:not(:last-of-type) {
@@ -439,9 +369,7 @@ blockquote {
     border: 1px solid #ffffff;
     font-size: 15px;
     color: #ffffff;
-    font-family: "Myriad Pro";
-    font-weight: normal;
-    font-style: normal;
+
     background-color: rgba(4, 0, 19, 0.1);
     padding: 18px 0 18px 13px;
 
@@ -463,9 +391,7 @@ blockquote {
     font-size: 15px;
     color: #ffffff;
     background-color: rgba(4, 0, 19, 0.1);
-    font-family: "Myriad Pro";
-    font-weight: normal;
-    font-style: normal;
+
     padding: 14px;
     resize: none;
     margin-top: 30px;
@@ -498,9 +424,8 @@ blockquote {
     margin: 0;
     font-size: 20px;
     color: #ffffff;
-    font-family: "Myriad Pro";
+
     font-weight: 500;
-    font-style: normal;
     max-width: 30ch;
     line-height: 30px;
     margin-left: 10px;
@@ -513,4 +438,8 @@ blockquote {
 
 .underline {
   text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
 }

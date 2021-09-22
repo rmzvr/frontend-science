@@ -29,6 +29,7 @@
 
 
 .burgermenu {
+
   position: absolute;
   width: 400px;
   padding: 50px;
@@ -42,6 +43,10 @@
 .burgermenu li {
   padding: 10px 0;
   font-size: 22px;
+
+  font-family: "Geometria";
+  font-weight: normal;
+  font-style: normal;
 }
 
 .burgermenu a[data-language] {
