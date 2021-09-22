@@ -108,25 +108,27 @@
             <img src="/images/slides/carousel-arrow-left.png" alt="arrow-left" />
           </button>
           <div class="carousel-track">
-            <div class="carousel-track__slide slide">
-              <img class="slide__image" src="/images/slides/logo-colored.png" alt="logo" width="565" height="271" />
-              <h1 class="slide__title"><span class="bold">Frontend-разработчики</span> должны быть в теме всего</h1>
-              <div class="slide__buttons-wrapper">
-                <a class="link link--theme--ghost" href="#">да, должны</a>
-                <a class="link link--theme--winter" href="#">конечно, должны</a>
+            <div class="carousel-track__slide slide" data-slide="1" data-clone="last"></div>
+            <div class="carousel-track__slide slide" data-slide="2"></div>
+
+            <div class="carousel-track__slide slide" data-slide="3">
+              <div class="slide__inner">
+                <img class="slide__image" src="/images/slides/logo-colored.png" alt="logo" width="565" height="271" />
+                <h1 class="slide__title"><span class="bold">Frontend-разработчики</span> должны быть в теме всего</h1>
+                <div class="slide__buttons-wrapper">
+                  <a class="link link--theme--ghost" href="#">да, должны</a>
+                  <a class="link link--theme--winter" href="#">конечно, должны</a>
+                </div>
               </div>
             </div>
-            <div class="carousel-track__slide slide"></div>
-            <div class="carousel-track__slide slide"></div>
+
+            <div class="carousel-track__slide slide" data-slide="4"></div>
+
+            <div class="carousel-track__slide slide" data-slide="5" data-clone="first"></div>
           </div>
           <button class="carousel__button" data-button-type="right">
             <img src="/images/slides/carousel-arrow-right.png" alt="arrow-right" />
           </button>
-          <div class="status-bar">
-            <div class="status-bar__item status-bar__item--active"></div>
-            <div class="status-bar__item"></div>
-            <div class="status-bar__item"></div>
-          </div>
 
           <label class="carousel__checkbox checkbox" data-checked="false">
             <span class="checkbox__input">

@@ -1,4 +1,8 @@
 .slide {
+  position: relative;
+}
+
+.slide__inner {
   display: flex;
   flex-direction: column;
   justify-content: center;

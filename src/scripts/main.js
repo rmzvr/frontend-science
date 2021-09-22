@@ -1,36 +1,63 @@
-const slides = document.querySelectorAll(".carousel-track__slide");
-const statusBarItems = document.querySelectorAll(".status-bar__item");
+const carouselTrack = document.querySelector(".carousel-track");
+const carouselSlides = document.querySelectorAll(".carousel-track__slide");
+const size = carouselSlides[0].clientWidth;
 
 const checkbox = document.querySelector(".checkbox");
 
 const buttons = document.querySelectorAll(".carousel__button");
-const leftArrowButton = buttons[0];
-const rightArrowButton = buttons[1];
+const prevButton = buttons[0];
+const nextButton = buttons[1];
 
 const form = document.forms.form;
 const inputs = document.querySelectorAll(".feedback__form input");
 
-const burgermenu = document.querySelector('.burgermenu');
-const burgermenuToggle = document.querySelector('.burgermenu-toggle');
+const burgermenu = document.querySelector(".burgermenu");
+const burgermenuToggle = document.querySelector(".burgermenu-toggle");
 
 let intervalID;
-let current = 0;
+let counter = 1;
 
-carousel();
 form.reset();
 
-burgermenuToggle.addEventListener('click', () => {
+// Show main slide
+counter++;
+carouselTrack.style.transform = "translateX(" + -size * counter + "px";
+
+burgermenuToggle.addEventListener("click", () => {
   burgermenu.hidden = !burgermenu.hidden;
 });
 
 intervalID = setInterval(() => {
-  if (current + 1 === slides.length) {
-    current = 0;
-  } else {
-    current++;
-  }
-  carousel();
+  nextSlide();
 }, 5000);
+
+prevButton.addEventListener(
+  "click",
+  throttle(() => {
+    prevSlide();
+  }, 500)
+);
+
+nextButton.addEventListener(
+  "click",
+  throttle(() => {
+    nextSlide();
+  }, 500)
+);
+
+carouselTrack.addEventListener("transitionend", () => {
+  if (carouselSlides[counter].dataset.clone === "last") {
+    carouselTrack.style.transition = "none";
+    counter = carouselSlides.length - 2;
+    carouselTrack.style.transform = "translateX(" + -size * counter + "px";
+  }
+
+  if (carouselSlides[counter].dataset.clone === "first") {
+    carouselTrack.style.transition = "none";
+    counter = carouselSlides.length - counter;
+    carouselTrack.style.transform = "translateX(" + -size * counter + "px";
+  }
+});
 
 checkbox.addEventListener("mousedown", () => {
   if (checkbox.dataset.checked === "false") {
@@ -40,33 +67,10 @@ checkbox.addEventListener("mousedown", () => {
   }
 
   intervalID = setInterval(() => {
-    if (current + 1 === slides.length) {
-      current = 0;
-    } else {
-      current++;
-    }
-    carousel();
+    nextSlide();
   }, 5000);
 
   checkbox.dataset.checked = "false";
-});
-
-leftArrowButton.addEventListener("click", () => {
-  if (current - 1 === -1) {
-    current = slides.length - 1;
-  } else {
-    current--;
-  }
-  carousel();
-});
-
-rightArrowButton.addEventListener("click", () => {
-  if (current + 1 === slides.length) {
-    current = 0;
-  } else {
-    current++;
-  }
-  carousel();
 });
 
 form.addEventListener("submit", (event) => {
@@ -78,29 +82,13 @@ form.addEventListener("submit", (event) => {
     }
   }
 
-  form.children[4].innerText = 'Отправлено!';
+  form.children[4].innerText = "Отправлено!";
 });
 
 for (const input of inputs) {
   input.addEventListener("blur", () => {
     validateInputs(input);
   });
-}
-
-function carousel() {
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.add("invisible");
-    setTimeout(() => {
-      slides[i].classList.add("hidden");
-    }, 0);
-    statusBarItems[i].classList.remove("status-bar__item--active");
-  }
-
-  slides[current].classList.remove("invisible");
-  setTimeout(() => {
-    slides[current].classList.remove("hidden");
-  }, 0);
-  statusBarItems[current].classList.add("status-bar__item--active");
 }
 
 function validateInputs(input) {
@@ -141,4 +129,29 @@ function validateInputs(input) {
       }
     }
   });
+}
+
+function throttle(callback, timeout) {
+  var wait = false;
+  return function () {
+    if (!wait) {
+      callback.call();
+      wait = true;
+      setTimeout(function () {
+        wait = false;
+      }, timeout);
+    }
+  };
+}
+
+function prevSlide() {
+  carouselTrack.style.transition = "transform 0.4s ease-in-out";
+  counter--;
+  carouselTrack.style.transform = "translateX(" + -size * counter + "px";
+}
+
+function nextSlide() {
+  carouselTrack.style.transition = "transform 0.4s ease-in-out";
+  counter++;
+  carouselTrack.style.transform = "translateX(" + -size * counter + "px";
 }

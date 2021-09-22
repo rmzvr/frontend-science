@@ -5,45 +5,45 @@
   position: relative;
 
   width: 100%;
+  max-width: 1920px;
   height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .carousel-track {
   display: flex;
+  height: 100%;
 }
 
 .carousel-track__slide {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 1920px;
+  height: 99.5%;
 
-  width: 101%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  background-position: -10px -10px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: -4px -4px;
 
-  transition: all ease 1s;
-
-  &.invisible {
-    opacity: 0;
+  &[data-slide="1"] {
+    background-image: url(/images/slides/photo3.png);
   }
 
-  &.hidden {
-    display: none;
-  }
-
-  &:nth-of-type(1) {
-    background-image: url(/images/slides/photo1.png);
-  }
-
-  &:nth-of-type(2) {
+  &[data-slide="2"] {
     background-image: url(/images/slides/photo2.png);
   }
 
-  &:nth-of-type(3) {
+  &[data-slide="3"] {
+    background-image: url(/images/slides/photo1.png);
+  }
+
+  &[data-slide="4"] {
     background-image: url(/images/slides/photo3.png);
+  }
+
+  &[data-slide="5"] {
+    background-image: url(/images/slides/photo2.png);
   }
 }
 
