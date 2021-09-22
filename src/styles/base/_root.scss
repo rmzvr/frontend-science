@@ -2,7 +2,7 @@
 
 :root {
     @each $color, $value in $colors {
-      --clr-#{$color}: #{$value};
+      --clr-#{"" + $color}: #{$value};
     }
 
     @each $screen-size, $font-size in $type-scale {
