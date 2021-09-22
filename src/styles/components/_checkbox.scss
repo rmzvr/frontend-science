@@ -3,9 +3,9 @@
   grid-template-columns: min-content auto;
   grid-gap: 0.5em;
 
-  font-size: 2rem;
+  font-size: var(--fs-600);
 
-  color: rgba(128, 128, 128, 0.5);
+  color: var(--clr-gray);
 }
 
 .checkbox__control {

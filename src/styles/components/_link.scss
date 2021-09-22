@@ -8,12 +8,12 @@
   width: 226px;
   height: 50px;
 
-  font-size: 18px;
+  font-size: var(--fs-300);
   line-height: 18px;
   font-weight: 500;
   text-align: center;
 
-  color: rgb(0, 0, 0);
+  color: var(--clr-black);
 
   &:hover,
   &:focus {
@@ -21,19 +21,19 @@
   }
 
   &--theme--ghost {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--clr-white-opacity-800);
 
-    color: rgb(255, 255, 255);
-    background-color: rgba(2, 2, 2, 0.1);
+    color: var(--clr-white);
+    background-color: var(--clr-black-opacity-900);
   }
 
   &--theme--winter {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: var(--clr-white);
+    color: var(--clr-black);
   }
 
   &--style--sky {
-    background-color: rgb(83, 208, 251);
-    color: rgb(0, 0, 0);
+    background-color: var(--clr-light-blue);
+    color: var(--clr-black);
   }
 }

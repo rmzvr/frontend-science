@@ -15,9 +15,9 @@
 
   padding: 10px 62px;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--clr-black-opacity-500);
 
-  border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 2px solid var(--clr-white-opacity-800);
 }
 
 .header__nav {
@@ -40,7 +40,7 @@
 
 .header__nav-links {
   font-family: "Geometria";
-  font-size: 14px;
+  font-size: var(--fs-100);
   text-align: center;
 
   * + * {
@@ -75,7 +75,7 @@
         width: 50%;
         height: 2px;
 
-        background-color: #f7b940;
+        background-color: var(--clr-yellow);
 
         transform: translateX(-50%);
       }
@@ -86,12 +86,12 @@
 .header__nav-contacts {
   margin-left: 44px;
 
-  font-size: 15px;
+  font-size: var(--fs-150);
   line-height: 0.9;
   letter-spacing: 1px;
   text-align: center;
 
-  color: #53d0fb;
+  color: var(--clr-cian);
 
   @include mq(large-m) {
     margin-left: 15px;
@@ -109,12 +109,12 @@
 .header__nav-languages {
   margin-left: 44px;
 
-  font-size: 15px;
+  font-size: var(--fs-150);
   line-height: 0.9;
   letter-spacing: 1px;
   text-align: center;
 
-  color: #53d0fb;
+  color: var(--clr-cian);
 
   * + * {
     margin-left: 15px;

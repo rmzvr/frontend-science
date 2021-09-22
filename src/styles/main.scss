@@ -33,10 +33,10 @@ p {
 }
 
 .introduction__aside {
-  font-size: 37px;
+  font-size: var(--fs-700);
   line-height: 44px;
 
-  color: rgb(0, 0, 0);
+  color: var(--clr-black);
 
   @include mq(medium-s) {
     display: none;
@@ -54,9 +54,9 @@ p {
 .introduction__content {
   margin-left: 104px;
 
-  font-size: 22px;
+  font-size: var(--fs-400);
 
-  color: black;
+  color: var(--clr-black);
 
   @include mq(medium-s) {
     margin: auto;
@@ -71,14 +71,14 @@ blockquote {
   margin: 100px 0 100px 5px;
   padding: 58px 115px;
 
-  font-size: 32px;
+  font-size: var(--fs-600);
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
 
-  border: 4px solid rgb(83, 208, 251);
+  border: 4px solid var(--clr-light-blue);
 
-  color: rgb(0, 0, 0);
+  color: var(--clr-black);
 
   @include mq(medium-s) {
     max-width: 44ch;
@@ -95,7 +95,7 @@ blockquote {
 
   padding: 68px 0 52px;
 
-  background-color: rgb(244, 244, 244);
+  background-color: var(--clr-light-gray);
 }
 
 .infographics__item {
@@ -116,11 +116,11 @@ blockquote {
     bottom: -25px;
 
     font-family: "Geometria";
-    font-size: 100px;
+    font-size: var(--fs-900);
     font-weight: bold;
     text-align: center;
 
-    color: rgb(0, 0, 0);
+    color: var(--clr-black);
   }
 
   &:nth-of-type(2) {
@@ -152,10 +152,10 @@ blockquote {
   margin-bottom: 0px;
   padding-left: 14px;
 
-  font-size: 30px;
+  font-size: var(--fs-550);
   font-weight: bold;
 
-  color: rgb(0, 0, 0);
+  color: var(--clr-black);
 }
 
 .infographics__item-description {
@@ -166,9 +166,9 @@ blockquote {
   padding-left: 14px;
 
   font-family: "Geometria";
-  font-size: 18px;
+  font-size: var(--fs-300);
 
-  color: rgb(0, 0, 0);
+  color: var(--clr-black);
 }
 
 .performance {
@@ -186,13 +186,13 @@ blockquote {
   margin: 0 auto;
   margin-bottom: 34px;
 
-  font-size: 37px;
+  font-size: var(--fs-700);
   line-height: 44px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
 
-  color: rgb(0, 0, 0);
+  color: var(--clr-black);
 }
 
 .performance__article {
@@ -220,14 +220,14 @@ blockquote {
 
     padding: 55px 25px 55px 46px;
 
-    font-size: 36px;
+    font-size: var(--fs-700);
     font-weight: bold;
     text-transform: uppercase;
 
-    border: 3px solid rgb(83, 208, 251);
+    border: 3px solid var(--clr-light-blue);
 
-    color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.4);
+    color: var(--clr-black);
+    background-color: var(--clr-white-opacity-600);
   }
 
   .performance__article-description {
@@ -236,11 +236,11 @@ blockquote {
     margin-left: 30px;
 
     font-family: "Geometria";
-    font-size: 24px;
+    font-size: var(--fs-500);
     font-weight: 300;
     text-transform: lowercase;
 
-    color: rgb(0, 0, 0);
+    color: var(--clr-black);
   }
 
   .performance__link {
@@ -322,11 +322,11 @@ blockquote {
 .feedback__title {
   margin-bottom: 70px;
 
-  font-size: 25px;
+  font-size: var(--fs-500);
   font-weight: bold;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: var(--clr-white);
 }
 
 .contacts__title {
@@ -338,10 +338,10 @@ blockquote {
 
   max-width: 25ch;
 
-  font-size: 16px;
+  font-size: var(--fs-200);
   line-height: 22px;
 
-  color: rgb(255, 255, 255);
+  color: var(--clr-white);
 
   &:not(:last-of-type) {
     margin-bottom: 52px;
@@ -395,7 +395,7 @@ blockquote {
     bottom: -23px;
     left: 0;
 
-    color: rgb(240, 128, 128);
+    color: var(--clr-light-pink);
   }
 
   input {
@@ -404,12 +404,12 @@ blockquote {
 
     padding: 18px 0 18px 13px;
 
-    font-size: 15px;
+    font-size: var(--fs-150);
 
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid var(--clr-white);
 
-    color: rgb(255, 255, 255);
-    background-color: rgba(4, 0, 19, 0.1);
+    color: var(--clr-white);
+    background-color: var(--clr-black-opacity-900);
 
     @include mq(medium-s) {
       max-width: 130px;
@@ -431,12 +431,12 @@ blockquote {
     margin-bottom: 75px;
     padding: 14px;
 
-    font-size: 15px;
+    font-size: var(--fs-150);
 
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid var(--clr-white);
 
-    color: rgb(255, 255, 255);
-    background-color: rgba(4, 0, 19, 0.1);
+    color: var(--clr-white);
+    background-color: var(--clr-black-opacity-900);
 
     resize: none;
 
@@ -473,14 +473,14 @@ blockquote {
     margin: 0;
     margin-left: 10px;
 
-    font-size: 20px;
+    font-size: var(--fs-350);
     font-weight: 500;
     line-height: 30px;
 
-    color: rgb(255, 255, 255);
+    color: var(--clr-white);
 
     @include mq(medium-s) {
-      font-size: 17px;
+      font-size: var(--fs-200);
     }
   }
 }

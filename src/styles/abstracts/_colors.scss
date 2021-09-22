@@ -1,5 +1,14 @@
 $colors: (
-    primary: (),
-    secondary: (),
-    neutral: (),
+  black: rgb(0, 0, 0),
+  black-opacity-500: rgba(0, 0, 0, 0.5),
+  black-opacity-900: rgba(2, 2, 2, 0.1),
+  white: rgb(255, 255, 255),
+  white-opacity-800: rgba(255, 255, 255, 0.2),
+  white-opacity-600: rgba(255, 255, 255, 0.4),
+  gray: rgba(128, 128, 128, 0.5),
+  light-gray: rgb(244, 244, 244),
+  yellow: rgb(247, 185, 64),
+  cian: rgb(83, 208, 251),
+  light-blue: rgb(83, 208, 251),
+  light-pink: rgb(240, 128, 128),
 );
