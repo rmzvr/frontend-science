@@ -1,6 +1,6 @@
 const carouselTrack = document.querySelector(".carousel-track");
 const carouselSlides = document.querySelectorAll(".carousel-track__slide");
-const size = carouselSlides[0].clientWidth;
+let size = carouselSlides[0].clientWidth;
 
 const checkbox = document.querySelector(".checkbox");
 
@@ -31,28 +31,24 @@ intervalID = setInterval(() => {
   nextSlide();
 }, 5000);
 
-prevButton.addEventListener(
-  "click",
-  throttle(() => {
-    prevSlide();
-  }, 500)
-);
+prevButton.addEventListener("click", () => {
+  prevSlide();
+});
 
-nextButton.addEventListener(
-  "click",
-  throttle(() => {
-    nextSlide();
-  }, 500)
-);
+nextButton.addEventListener("click", () => {
+  nextSlide();
+});
 
 carouselTrack.addEventListener("transitionend", () => {
   if (carouselSlides[counter].dataset.clone === "last") {
+    size = carouselSlides[0].clientWidth;
     carouselTrack.style.transition = "none";
     counter = carouselSlides.length - 2;
     carouselTrack.style.transform = "translateX(" + -size * counter + "px";
   }
 
   if (carouselSlides[counter].dataset.clone === "first") {
+    size = carouselSlides[0].clientWidth;
     carouselTrack.style.transition = "none";
     counter = carouselSlides.length - counter;
     carouselTrack.style.transform = "translateX(" + -size * counter + "px";
@@ -131,27 +127,46 @@ function validateInputs(input) {
   });
 }
 
-function throttle(callback, timeout) {
-  var wait = false;
-  return function () {
-    if (!wait) {
-      callback.call();
-      wait = true;
-      setTimeout(function () {
-        wait = false;
-      }, timeout);
-    }
-  };
-}
-
 function prevSlide() {
+  if (counter <= 0) return;
+
+  size = carouselSlides[0].clientWidth;
   carouselTrack.style.transition = "transform 0.4s ease-in-out";
   counter--;
   carouselTrack.style.transform = "translateX(" + -size * counter + "px";
 }
 
 function nextSlide() {
+  if (counter >= carouselSlides.length - 1) return;
+
+  size = carouselSlides[0].clientWidth;
   carouselTrack.style.transition = "transform 0.4s ease-in-out";
   counter++;
   carouselTrack.style.transform = "translateX(" + -size * counter + "px";
 }
+
+const introduction = document.querySelector(".introduction");
+
+const infographics = document.querySelector(".infographics");
+const infographicsItems = document.querySelectorAll(".infographics__item");
+
+window.addEventListener("scroll", (event) => {
+  let introOffsetY = window.scrollY + introduction.getBoundingClientRect().top;
+
+  if (introOffsetY <= window.scrollY) {
+    document.querySelector(".blockquote").style.right = "0";
+  }
+
+  let infoOffsetY =
+    window.scrollY - infographics.getBoundingClientRect().top + infographics.getBoundingClientRect().height;
+
+  if (infoOffsetY >= window.scrollY) {
+    for (const item of infographicsItems) {
+      if (infographicsItems[0] === item || infographicsItems[2] === item) {
+        item.style.top = 0;
+      } else {
+        item.style.bottom = 0;
+      }
+    }
+  }
+});

@@ -53,6 +53,10 @@
 
   font-family: "Geometria";
   font-size: var(--fs-400);
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .burgermenu li a[data-language] {

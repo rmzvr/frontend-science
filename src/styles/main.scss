@@ -79,6 +79,8 @@ p {
 
   color: var(--clr-black);
 
+  overflow: hidden;
+
   @include mq(medium-m) {
     margin: auto;
   }
@@ -103,6 +105,11 @@ p {
 
   border: 4px solid var(--clr-light-blue);
 
+  position: relative;
+  right: -800px;
+
+  transition: all 1s ease;
+
   color: var(--clr-black);
 
   @include mq(medium-m) {
@@ -124,6 +131,8 @@ p {
 
   background-color: var(--clr-light-gray);
 
+  overflow: hidden;
+
   @include mq(small) {
     flex-direction: column;
     align-items: center;
@@ -137,6 +146,14 @@ p {
   align-items: center;
 
   position: relative;
+  top: -411px;
+
+  transition: all 0.5s ease-out;
+
+  &:nth-of-type(2) {
+  top: inherit;
+  bottom: -411px;
+  }
 
   &:not(:last-of-type) {
     margin-right: 150px;

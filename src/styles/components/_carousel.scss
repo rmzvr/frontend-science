@@ -4,8 +4,7 @@
 
   position: relative;
 
-  width: 100%;
-  max-width: 1920px;
+  max-width: 100%;
   height: 100%;
   margin: 0 auto;
   overflow: hidden;
@@ -17,14 +16,15 @@
 }
 
 .carousel-track__slide {
-  width: 1920px;
-  height: 99.5%;
+  width: 100vw;
+  height: 101%;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   background-position: -4px -4px;
+  background-size: cover;
 
   &[data-slide="1"] {
     background-image: url(/images/slides/photo3.png);
