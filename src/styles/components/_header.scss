@@ -1,4 +1,4 @@
-@use 'abstracts' as *;
+@use "abstracts" as *;
 
 .header {
   position: absolute;
@@ -27,8 +27,6 @@
 
   color: white;
 
-  text-transform: uppercase;
-
   @include mq(medium-m) {
     display: none;
   }
@@ -39,10 +37,6 @@
 }
 
 .header__nav-links {
-  font-family: "Geometria";
-  font-size: var(--fs-100);
-  text-align: center;
-
   * + * {
     margin-left: 40px;
 
@@ -60,8 +54,6 @@
     position: relative;
 
     min-width: 143px;
-    
-    text-align: center;
 
     &:hover,
     &:focus {
@@ -86,10 +78,6 @@
 .header__nav-contacts {
   margin-left: 44px;
 
-  font-size: var(--fs-150);
-  line-height: 0.9;
-  letter-spacing: 1px;
-  text-align: center;
 
   color: var(--clr-cian);
 
@@ -109,10 +97,6 @@
 .header__nav-languages {
   margin-left: 44px;
 
-  font-size: var(--fs-150);
-  line-height: 0.9;
-  letter-spacing: 1px;
-  text-align: center;
 
   color: var(--clr-cian);
 
@@ -123,7 +107,7 @@
   li {
     &:not(:last-of-type)::after {
       content: "|";
-      
+
       margin-left: 15px;
     }
   }

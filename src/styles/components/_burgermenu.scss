@@ -1,4 +1,4 @@
-@use 'abstracts' as *;
+@use "abstracts" as *;
 
 .burger-nav {
   display: none;
@@ -50,9 +50,6 @@
 
 .burgermenu li {
   padding: 10px 0;
-
-  font-family: "Geometria";
-  font-size: var(--fs-400);
 
   &:hover {
     transform: scale(1.1);
